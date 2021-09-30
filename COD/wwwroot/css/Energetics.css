@@ -1,0 +1,1467 @@
+﻿p, span {
+    font-size: 14px;
+}
+
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+#timestamp {
+    position: absolute;
+    top: 6px;
+    right: 104px;
+    color: black;
+    font-size: 18px;
+}
+
+    #timestamp + p {
+        position: absolute;
+        top: 32px;
+        right: 104px;
+        color: grey;
+        font-size: 12px;
+    }
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: auto;
+    justify-content: center;
+}
+
+#RU04_mobile {
+    width: 900px;
+    height: 600px;
+}
+
+#image_of_RU04 {
+    display: none;
+    width: 900px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image_of_DGU {
+    display: block;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image_of_AVR {
+    display: block;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#greenpipes {
+    display: none;
+}
+
+#bluepipes {
+    display: none;
+}
+
+.RU04, .DGU {
+    margin: 15px;
+    background-color: #EEEEEE;
+    padding: 40px 15px 15px 15px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.RU04 {
+    width: 925px;
+    flex-grow: 0;
+}
+
+.DGU {
+    min-width: 925px;
+    flex-grow: 0;
+}
+
+.SHRI {
+    width: 925px;
+    flex-grow: 0;
+    margin: 15px;
+    background-color: #EEEEEE;
+    padding: 40px 15px 15px 15px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.AVR {
+    position: relative;
+    flex-grow: 0;
+    padding: 15px;
+}
+
+
+#input1_lablel {
+    position: absolute;
+    top: 3%;
+    left: 33.8%;
+}
+
+#input2_lablel {
+    position: absolute;
+    top: 3%;
+    left: 62%;
+}
+
+#RU04_label {
+    position: absolute;
+    top: 37%;
+    left: 21%;
+}
+
+#count1_power_label {
+    position: absolute;
+    top: 18%;
+    left: 37.5%;
+}
+
+#count1_power_on {
+    position: absolute;
+    top: 20%;
+    left: 39%;
+}
+
+#count1_frequency_label {
+    position: absolute;
+    top: 22.5%;
+    left: 37.5%;
+}
+
+#count1_frequency_value {
+    position: absolute;
+    top: 25%;
+    left: 38%;
+}
+
+.valueName {
+    font-size: 12px;
+    color: grey;
+}
+
+#Count1_value {
+    position: absolute;
+    top: 21%;
+    left: 28.1%;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 19.5px;
+}
+
+#count2_power_label {
+    position: absolute;
+    top: 47%;
+    left: 37.5%;
+}
+
+#count2_power_on {
+    position: absolute;
+    top: 49%;
+    left: 39%;
+}
+
+#count2_frequency_label {
+    position: absolute;
+    top: 51.6%;
+    left: 37.5%;
+}
+
+#count2_frequency_value {
+    position: absolute;
+    top: 54%;
+    left: 38%;
+}
+
+#Count2_value {
+    position: absolute;
+    top: 50%;
+    left: 28.2%;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 19.5px;
+}
+
+#countNum2 {
+    position: absolute;
+    top: 44.5%;
+    left: 27.5%;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+#count2_DateTime {
+    position: absolute;
+    top: 36%;
+    left: 35%;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+#count3_power_label {
+    position: absolute;
+    top: 47%;
+    left: 67%;
+}
+
+#count3_power_on {
+    position: absolute;
+    top: 49%;
+    left: 68.5%;
+}
+
+#count3_frequency_label {
+    position: absolute;
+    top: 51.6%;
+    left: 67%;
+}
+
+#count3_frequency_value {
+    position: absolute;
+    top: 54%;
+    left: 67.8%;
+}
+
+#Count3_value {
+    position: absolute;
+    top: 49.9%;
+    left: 57.5%;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 19px;
+}
+
+#countNum3 {
+    position: absolute;
+    top: 44.5%;
+    left: 57%;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+#count3_DateTime {
+    position: absolute;
+    top: 36%;
+    left: 60%;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+#count4_power_label {
+    position: absolute;
+    top: 18%;
+    left: 66%;
+}
+
+#count4_power_on {
+    position: absolute;
+    top: 20%;
+    left: 68%;
+}
+
+#count4_frequency_label {
+    position: absolute;
+    top: 22.5%;
+    left: 66%;
+}
+
+#count4_frequency_value {
+    position: absolute;
+    top: 25%;
+    left: 67%;
+}
+
+#Count4_value {
+    position: absolute;
+    top: 21%;
+    left: 56.6%;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+#label_Avr {
+    position: absolute;
+    top: 66%;
+    left: 23%;
+}
+
+#NN_line_voltage {
+    position: absolute;
+    top: 68%;
+    left: 45%;
+    font-size: 14px;
+}
+
+#NN_L1L2 {
+    position: absolute;
+    top: 70.5%;
+    left: 46%;
+}
+
+#NN_L2L3 {
+    position: absolute;
+    top: 73.5%;
+    left: 46%;
+}
+
+#NN_L3L1 {
+    position: absolute;
+    top: 76.5%;
+    left: 46%;
+}
+
+#NN_line_frequency {
+    position: absolute;
+    top: 79%;
+    left: 45.5%;
+    font-size: 14px;
+}
+
+#NN_L1 {
+    position: absolute;
+    top: 81.5%;
+    left: 49%;
+}
+
+#NN_L2 {
+    position: absolute;
+    top: 84.5%;
+    left: 49%;
+}
+
+#DGU1_label {
+    position: absolute;
+    top: 4%;
+    left: 15%;
+}
+
+#DGU2_label {
+    position: absolute;
+    top: 4%;
+    left: 54%;
+}
+
+#RUDGU_label {
+    position: absolute;
+    top: 43%;
+    left: 13%;
+}
+
+#AVRDGU_label {
+    position: absolute;
+    top: 55%;
+    left: 17%;
+}
+
+#DGU_line_voltage {
+    position: absolute;
+    top: 55%;
+    left: 44%;
+    font-size: 14px;
+}
+
+#DGU_L1L2 {
+    position: absolute;
+    top: 59%;
+    left: 45%;
+}
+
+#DGU_L2L3 {
+    position: absolute;
+    top: 63%;
+    left: 45%;
+}
+
+#DGU_L3L1 {
+    position: absolute;
+    top: 67%;
+    left: 45%;
+}
+
+#DGU_line_frequency {
+    position: absolute;
+    top: 71%;
+    left: 44.5%;
+    font-size: 14px;
+}
+
+#DGU_L1 {
+    position: absolute;
+    top: 75%;
+    left: 49%;
+}
+
+#DGU_L2 {
+    position: absolute;
+    top: 79%;
+    left: 49%;
+}
+
+
+#SHRI1_label {
+    position: absolute;
+    top: -0.5%;
+    left: 5%;
+}
+
+#SHRI1_label_AVR {
+    position: absolute;
+    top: 6%;
+    left: 46%;
+}
+
+#SHRI1_IBP1_label {
+    position: absolute;
+    top: 37%;
+    left: 18%;
+}
+
+#SHRI1_IBP1_percent {
+    position: absolute;
+    top: 43%;
+    left: 30%;
+}
+
+#SHRI1_IBP1_chargeTime {
+    position: absolute;
+    top: 48%;
+    left: 25%;
+}
+
+#SHRI1_IBP1_num {
+    position: absolute;
+    top: 41%;
+    left: 43%;
+    font-size: 22px;
+}
+
+#SHRI1_IBP1_status {
+    position: absolute;
+    top: 47.5%;
+    left: 40%;
+    background-color: #7ABD84;
+}
+
+#SHRI1_IBP1_load {
+    position: absolute;
+    top: 52%;
+    left: 43%;
+}
+
+#SHRI2_label {
+    position: absolute;
+    top: -0.5%;
+    left: 5%;
+}
+
+#SHRI2_label_AVR {
+    position: absolute;
+    top: 6%;
+    left: 45%;
+}
+
+#SHRI2_IBP_label {
+    position: absolute;
+    top: 37%;
+    left: 18%;
+}
+
+#SHRI2_IBP1_percent {
+    position: absolute;
+    top: 43%;
+    left: 30%;
+}
+
+#SHRI2_IBP1_chargeTime {
+    position: absolute;
+    top: 48%;
+    left: 24%;
+}
+
+#SHRI2_IBP1_num {
+    position: absolute;
+    top: 41%;
+    left: 43%;
+    font-size: 22px;
+}
+
+#SHRI2_IBP1_status {
+    position: absolute;
+    top: 47.5%;
+    left: 40%;
+    background-color: #7ABD84;
+}
+
+#SHRI2_IBP1_load {
+    position: absolute;
+    top: 52%;
+    left: 43%;
+}
+
+#SHRI1_DGU1label {
+    position: absolute;
+    top: 78%;
+    left: 73%;
+}
+
+#SHRI1_MachineRoomLabel {
+    position: absolute;
+    top: 84%;
+    left: 40%;
+}
+
+#SHRI2_DGU1label {
+    position: absolute;
+    top: 78%;
+    left: 73%;
+}
+
+#SHRI2_MachineRoomLabel {
+    position: absolute;
+    top: 84%;
+    left: 39%;
+}
+
+#SHRIK1_label {
+    position: absolute;
+    top: -0.5%;
+    left: 5%;
+}
+
+#SHRIK1_label_AVR {
+    position: absolute;
+    top: 6%;
+    left: 45%;
+}
+
+#SHRIK1_IBP_label {
+    position: absolute;
+    top: 37%;
+    left: 35%;
+}
+
+#SHRIK1_IBP1_percent {
+    position: absolute;
+    top: 43.5%;
+    left: 46.5%;
+}
+
+#SHRIK1_IBP1_chargeTime {
+    position: absolute;
+    top: 48%;
+    left: 42%;
+}
+
+#SHRIK1_IBP1_num {
+    position: absolute;
+    top: 41%;
+    left: 61%;
+    font-size: 22px;
+}
+
+#SHRIK1_IBP1_status {
+    position: absolute;
+    top: 47.5%;
+    left: 56.7%;
+    background-color: #7ABD84;
+}
+
+#SHRIK1_IBP1_load {
+    position: absolute;
+    top: 52%;
+    left: 61%;
+}
+
+#SHRIK1_DGU1label {
+    position: absolute;
+    top: 78%;
+    left: 73%;
+}
+
+#SHRIK1_MachineRoomLabel {
+    position: absolute;
+    top: 82%;
+    left: 34%;
+    text-align: center;
+}
+
+#SHRIK2_label {
+    position: absolute;
+    top: -0.5%;
+    left: 5%;
+}
+
+#SHRIK2_label_AVR {
+    position: absolute;
+    top: 6%;
+    left: 45%;
+    font-size: 18px;
+}
+
+#SHRIK2_IBP_label {
+    position: absolute;
+    top: 37%;
+    left: 33%;
+}
+
+#SHRIK2_IBP1_percent {
+    position: absolute;
+    top: 43%;
+    left: 46%;
+}
+
+#SHRIK2_IBP1_chargeTime {
+    position: absolute;
+    top: 48%;
+    left: 40%;
+}
+
+#SHRIK2_IBP1_num {
+    position: absolute;
+    top: 41%;
+    left: 61%;
+    font-size: 22px;
+}
+
+#SHRIK2_IBP1_status {
+    position: absolute;
+    top: 48%;
+    left: 56%;
+    background-color: #7ABD84;
+}
+
+#SHRIK2_IBP1_load {
+    position: absolute;
+    top: 52%;
+    left: 61%;
+}
+
+#SHRIK2_DGU1label {
+    position: absolute;
+    top: 77%;
+    left: 73%;
+}
+
+#SHRIK2_MachineRoomLabel {
+    position: absolute;
+    top: 81%;
+    left: 31%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.bigTitleLabel {
+    font-size: 18px;
+}
+
+.titleLabel {
+    font-size: 18px;
+}
+
+
+#SHRI1_frequency_label {
+    position: absolute;
+    top: 10.5%;
+    left: 53%;
+    font-size: 12px;
+}
+
+#SHRI1_line_voltage {
+    position: absolute;
+    top: 10.5%;
+    left: 21%;
+    font-size: 12px;
+}
+
+#SHRI1_frequency_L1_label {
+    position: absolute;
+    top: 13.5%;
+    left: 64%;
+}
+
+#SHRI1_frequency_L2_label {
+    position: absolute;
+    top: 17.5%;
+    left: 64%;
+}
+
+#SHRI1_L1L2 {
+    position: absolute;
+    top: 13.5%;
+    left: 24%;
+}
+
+#SHRI1_L2L3 {
+    position: absolute;
+    top: 17.5%;
+    left: 24%;
+}
+
+#SHRI1_L3L1 {
+    position: absolute;
+    top: 21.5%;
+    left: 24%;
+}
+
+#SHRI2_frequency_label {
+    position: absolute;
+    top: 10.5%;
+    left: 53%;
+    font-size: 12px;
+}
+
+#SHRI2_line_voltage {
+    position: absolute;
+    top: 10.5%;
+    left: 21%;
+    font-size: 12px;
+}
+
+#SHRI2_frequency_L1_label {
+    position: absolute;
+    top: 13.5%;
+    left: 64%;
+}
+
+#SHRI2_frequency_L2_label {
+    position: absolute;
+    top: 17.5%;
+    left: 64%;
+}
+
+#SHRI2_L1L2 {
+    position: absolute;
+    top: 13.5%;
+    left: 24%;
+}
+
+#SHRI2_L2L3 {
+    position: absolute;
+    top: 17.5%;
+    left: 24%;
+}
+
+#SHRI2_L3L1 {
+    position: absolute;
+    top: 21.5%;
+    left: 24%;
+}
+
+#SHRIK1_frequency_label {
+    position: absolute;
+    top: 10.5%;
+    left: 53%;
+    font-size: 12px;
+}
+
+#SHRIK1_line_voltage {
+    position: absolute;
+    top: 10.5%;
+    left: 21%;
+    font-size: 12px;
+}
+
+#SHRIK1_frequency_L1_label {
+    position: absolute;
+    top: 13.5%;
+    left: 64%;
+}
+
+#SHRIK1_frequency_L2_label {
+    position: absolute;
+    top: 17.5%;
+    left: 64%;
+}
+
+#SHRIK1_L1L2 {
+    position: absolute;
+    top: 13.5%;
+    left: 24%;
+}
+
+#SHRIK1_L2L3 {
+    position: absolute;
+    top: 17.5%;
+    left: 24%;
+}
+
+#SHRIK1_L3L1 {
+    position: absolute;
+    top: 21.5%;
+    left: 24%;
+}
+
+#SHRIK2_frequency_label {
+    position: absolute;
+    top: 10.5%;
+    left: 53%;
+    font-size: 12px;
+}
+
+#SHRIK2_line_voltage {
+    position: absolute;
+    top: 10.5%;
+    left: 21%;
+    font-size: 12px;
+}
+
+#SHRIK2_frequency_L1_label {
+    position: absolute;
+    top: 13.5%;
+    left: 64%;
+}
+
+#SHRIK2_frequency_L2_label {
+    position: absolute;
+    top: 17.5%;
+    left: 64%;
+}
+
+#SHRIK2_L1L2 {
+    position: absolute;
+    top: 13.5%;
+    left: 24%;
+}
+
+#SHRIK2_L2L3 {
+    position: absolute;
+    top: 17.5%;
+    left: 24%;
+}
+
+#SHRIK2_L3L1 {
+    position: absolute;
+    top: 21.5%;
+    left: 24%;
+}
+
+
+
+@media (min-width:1450px) {
+    ul {
+        columns: 4;
+        -webkit-columns: 4;
+        -moz-columns: 4;
+    }
+
+    .content {
+        max-width: 1440px;
+    }
+
+    .RU04 {
+        width: 900px;
+        flex-grow: 0;
+    }
+
+    .DGU {
+        min-width: 400px;
+        flex-grow: 0;
+    }
+
+    .SHRI {
+        width: 1410px;
+        flex-grow: 0;
+        margin: 15px;
+        background-color: #EEEEEE;
+        padding: 40px 15px 15px 15px;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .AVR {
+        position: relative;
+        flex-grow: 0;
+        padding: 15px;
+    }
+
+    #input1_lablel {
+        position: absolute;
+        top: 4%;
+        left: 8%;
+    }
+
+    #input2_lablel {
+        position: absolute;
+        top: 4%;
+        left: 89%;
+    }
+
+    #RU04_label {
+        position: absolute;
+        top: 11%;
+        left: 25%;
+    }
+
+    #RU04_mobile {
+        display: none;
+    }
+
+    #image_of_RU04 {
+        width: 850px;
+        display: block;
+    }
+
+    #image_of_DGU {
+        width: 450px;
+        height: 350px;
+    }
+
+    .image_of_AVR {
+        height: auto;
+        width: 310px;
+    }
+
+    #greenpipes {
+        z-index: 1;
+        position: absolute;
+        display: block;
+        top: 85%;
+        left: 8%;
+        width: 1050px;
+    }
+
+    #bluepipes {
+        z-index: 1;
+        position: absolute;
+        display: block;
+        top: 92%;
+        left: 33.5%;
+        width: 1050px;
+    }
+
+    #label_Avr {
+        position: absolute;
+        top: 49%;
+        left: 27%;
+    }
+
+    #Count1_value {
+        top: 28.9%;
+        left: 3.4%;
+        font-size: 15.5px;
+    }
+
+    #Count2_value {
+        top: 28.9%;
+        left: 31.2%;
+        font-size: 15.5px;
+    }
+
+    #Count3_value {
+        top: 28.9%;
+        left: 55.1%;
+        font-size: 14px;
+    }
+
+    #Count4_value {
+        top: 28.9%;
+        left: 84.4%;
+        font-size: 14px;
+    }
+
+    #count1_power_on {
+        top: 26.5%;
+        left: 12%;
+    }
+
+    #count1_frequency_value {
+        top: 33.5%;
+        left: 11%;
+    }
+
+    #count1_power_label {
+        top: 23.5%;
+        left: 10.3%;
+    }
+
+    #count1_frequency_label {
+        top: 30%;
+        left: 10.5%;
+    }
+
+    #count2_power_on {
+        top: 26.4%;
+        left: 40%;
+    }
+
+    #countNum2 {
+        top: 21.8%;
+        left: 30.8%;
+    }
+
+    #count2_frequency_value {
+        top: 33.5%;
+        left: 38.9%;
+    }
+
+    #count2_power_label {
+        top: 23.5%;
+        left: 38%;
+    }
+
+    #count2_frequency_label {
+        top: 30%;
+        left: 38.5%;
+    }
+
+    #count3_power_on {
+        top: 26.5%;
+        left: 64%;
+    }
+
+    #countNum3 {
+        top: 21.8%;
+        left: 54.8%;
+    }
+
+    #count3_frequency_value {
+        top: 33.5%;
+        left: 62.9%;
+    }
+
+    #count3_power_label {
+        top: 23.5%;
+        left: 62%;
+    }
+
+    #count3_frequency_label {
+        top: 30%;
+        left: 62.5%;
+    }
+
+    #count4_power_on {
+        top: 26.5%;
+        left: 93%;
+    }
+
+    #count4_frequency_value {
+        top: 33.5%;
+        left: 92%;
+    }
+
+    #count4_power_label {
+        top: 23.5%;
+        left: 91.5%;
+    }
+
+    #count4_frequency_label {
+        top: 30%;
+        left: 91.5%;
+    }
+
+    #DGU1_label {
+        position: absolute;
+        top: 7.5%;
+        left: 6%;
+    }
+
+    #DGU2_label {
+        position: absolute;
+        top: 7.5%;
+        left: 51%;
+    }
+
+    #DGU_line_voltage {
+        top: 52%;
+        left: 40%;
+    }
+
+    #DGU_L1L2 {
+        top: 55.5%;
+        left: 41%;
+        font-size: 16px;
+    }
+
+    #DGU_L2L3 {
+        top: 60%;
+        left: 41%;
+        font-size: 16px;
+    }
+
+    #DGU_L3L1 {
+        top: 65%;
+        left: 41%;
+        font-size: 16px;
+    }
+
+    #DGU_line_frequency {
+        top: 69.5%;
+        left: 40%;
+    }
+
+    #DGU_L1 {
+        top: 73%;
+        left: 48%;
+        font-size: 16px;
+    }
+
+    #DGU_L2 {
+        top: 77%;
+        left: 48%;
+        font-size: 16px;
+    }
+
+    #RUDGU_label {
+        left: 3%;
+    }
+
+    #AVRDGU_label {
+        top: 52%;
+        left: 7%;
+    }
+
+    #NN_L1L2 {
+        top: 54%;
+        left: 45.5%;
+    }
+
+    #NN_L2L3 {
+        top: 58%;
+        left: 45.5%;
+    }
+
+    #NN_line_voltage {
+        top: 49.5%;
+    }
+
+    #NN_line_frequency {
+        top: 67.5%;
+    }
+
+    #NN_L3L1 {
+        top: 63%;
+        left: 45.5%;
+    }
+
+    #NN_L1 {
+        top: 71%;
+        left: 48%;
+    }
+
+    #NN_L2 {
+        top: 75%;
+        left: 48%;
+    }
+
+    #SHRI1_frequency_label {
+        position: absolute;
+        top: 10.5%;
+        left: 51%;
+        font-size: 12px;
+    }
+
+    #SHRI1_line_voltage {
+        position: absolute;
+        top: 10.5%;
+        left: 19%;
+        font-size: 12px;
+    }
+
+    #SHRI1_frequency_L1_label {
+        position: absolute;
+        top: 13.5%;
+        left: 64%;
+    }
+
+    #SHRI1_frequency_L2_label {
+        position: absolute;
+        top: 17.5%;
+        left: 64%;
+    }
+
+    #SHRI1_L1L2 {
+        position: absolute;
+        top: 13.5%;
+        left: 24%;
+    }
+
+    #SHRI1_L2L3 {
+        position: absolute;
+        top: 17.5%;
+        left: 24%;
+    }
+
+    #SHRI1_L3L1 {
+        position: absolute;
+        top: 21.5%;
+        left: 24%;
+    }
+
+    #SHRI2_frequency_label {
+        position: absolute;
+        top: 10.5%;
+        left: 51%;
+        font-size: 12px;
+    }
+
+    #SHRI2_line_voltage {
+        position: absolute;
+        top: 10.5%;
+        left: 19%;
+        font-size: 12px;
+    }
+
+    #SHRI2_frequency_L1_label {
+        position: absolute;
+        top: 13.5%;
+        left: 64%;
+    }
+
+    #SHRI2_frequency_L2_label {
+        position: absolute;
+        top: 17.5%;
+        left: 64%;
+    }
+
+    #SHRI2_L1L2 {
+        position: absolute;
+        top: 13.5%;
+        left: 24%;
+    }
+
+    #SHRI2_L2L3 {
+        position: absolute;
+        top: 17.5%;
+        left: 24%;
+    }
+
+    #SHRI2_L3L1 {
+        position: absolute;
+        top: 21.5%;
+        left: 24%;
+    }
+
+    #SHRIK1_frequency_label {
+        position: absolute;
+        top: 10.5%;
+        left: 51%;
+        font-size: 12px;
+    }
+
+    #SHRIK1_line_voltage {
+        position: absolute;
+        top: 10.5%;
+        left: 19%;
+        font-size: 12px;
+    }
+
+    #SHRIK1_frequency_L1_label {
+        position: absolute;
+        top: 13.5%;
+        left: 64%;
+    }
+
+    #SHRIK1_frequency_L2_label {
+        position: absolute;
+        top: 17.5%;
+        left: 64%;
+    }
+
+    #SHRIK1_L1L2 {
+        position: absolute;
+        top: 13.5%;
+        left: 24%;
+    }
+
+    #SHRIK1_L2L3 {
+        position: absolute;
+        top: 17.5%;
+        left: 24%;
+    }
+
+    #SHRIK1_L3L1 {
+        position: absolute;
+        top: 21.5%;
+        left: 24%;
+    }
+
+    #SHRIK2_frequency_label {
+        position: absolute;
+        top: 10.5%;
+        left: 51%;
+        font-size: 12px;
+    }
+
+    #SHRIK2_line_voltage {
+        position: absolute;
+        top: 10.5%;
+        left: 19%;
+        font-size: 12px;
+    }
+
+    #SHRIK2_frequency_L1_label {
+        position: absolute;
+        top: 13.5%;
+        left: 64%;
+    }
+
+    #SHRIK2_frequency_L2_label {
+        position: absolute;
+        top: 17.5%;
+        left: 64%;
+    }
+
+    #SHRIK2_L1L2 {
+        position: absolute;
+        top: 13.5%;
+        left: 24%;
+    }
+
+    #SHRIK2_L2L3 {
+        position: absolute;
+        top: 17.5%;
+        left: 24%;
+    }
+
+    #SHRIK2_L3L1 {
+        position: absolute;
+        top: 21.5%;
+        left: 24%;
+    }
+
+
+    #SHRI1_IBP1_percent {
+        top: 43.3%;
+        left: 28%;
+    }
+
+    #SHRI1_IBP1_chargeTime {
+        top: 47.6%;
+        left: 22%;
+    }
+
+    #SHRI1_IBP1_status {
+        left: 38.6%;
+    }
+
+    #SHRI1_IBP1_load {
+        left: 41%;
+    }
+
+    #SHRI2_IBP1_percent {
+        top: 43.3%;
+        left: 28%;
+    }
+
+    #SHRI2_IBP1_chargeTime {
+        top: 47.6%;
+        left: 22%;
+    }
+
+    #SHRI2_IBP1_num {
+        left: 41.5%;
+    }
+
+    #SHRI2_IBP1_status {
+        left: 38.6%;
+    }
+
+    #SHRI2_IBP1_load {
+        left: 41%;
+    }
+
+    #SHRIK1_IBP1_percent {
+        top: 43.3%;
+        left: 46%;
+    }
+
+    #SHRIK1_IBP1_chargeTime {
+        top: 48%;
+        left: 41%
+    }
+
+    #SHRIK1_IBP1_status {
+        left: 57%;
+    }
+
+    #SHRIK1_IBP1_load {
+        left: 59%;
+    }
+
+    #SHRI1_frequency_L1_label {
+        font-size: 16px;
+    }
+
+    #SHRI1_frequency_L2_label {
+        font-size: 16px;
+    }
+
+    #SHRI1_frequency_L1_value {
+        font-size: 16px;
+    }
+
+    #SHRI1_frequency_L2_value {
+        font-size: 16px;
+    }
+
+    #SHRI2_frequency_L1_label {
+        font-size: 16px;
+    }
+
+    #SHRI2_frequency_L2_label {
+        font-size: 16px;
+    }
+
+    #SHRI2_frequency_L1_value {
+        font-size: 16px;
+    }
+
+    #SHRI2_frequency_L2_value {
+        font-size: 16px;
+    }
+
+    #SHRIK1_frequency_L1_label {
+        font-size: 16px;
+    }
+
+    #SHRIK1_frequency_L2_label {
+        font-size: 16px;
+    }
+
+    #SHRIK1_frequency_L1_value {
+        font-size: 16px;
+    }
+
+    #SHRIK1_frequency_L2_value {
+        font-size: 16px;
+    }
+
+    #SHRIK1_MachineRoomLabel {
+        top: 81%;
+        left: 29%;
+    }
+
+    #SHRIK1_DGU1label {
+        top: 77%;
+    }
+
+    #SHRI2_DGU1label {
+        top: 77%;
+    }
+
+    #SHRI1_DGU1label {
+        top: 77%;
+    }
+}
+
+@media (max-width:930px) {
+    .content {
+        display: block;
+        flex-direction: column;
+    }
+}
