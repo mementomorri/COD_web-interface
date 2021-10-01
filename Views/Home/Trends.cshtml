@@ -1,0 +1,268 @@
+﻿
+@{
+    ViewData["Title"] = "Тренды";
+}
+<link href="~/css/Trends.css" rel="stylesheet" />
+
+
+
+<div class="Trend-content">
+    <div class="trend-container">
+        <h2>Тренды</h2>
+        <div class="trend">
+            <p class="green">Температрура</p>
+
+            <div class="line-over-trand">
+                <div class="range-date-selector">
+                    <span class="input-caption">интревал времени</span>
+                    <select onchange="chageValue('T')" id="T_selectDateRange">
+                        <option value="0">месяц</option>
+                        <option value="1" selected>неделя</option>
+                        <option value="2">день</option>
+                        <option value="3">прозвольно</option>
+                    </select>
+                </div>
+                <div id="T_swipeData" class="line-over-trand">
+                    <div class="arrow-6" onclick="leftArrowClick('T',this)">
+                        <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                                <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                <polygon class="arrow-6-pl-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <input id="T_currentDate" type="date" onchange="chartDateChange('T')">
+                    <span class="end-date-caprion">конечная дата</span>
+
+
+                    <div class="arrow-6" onclick="rightArrowClick('T',this)" id="T_arrow_right">
+                        <svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                                <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                <polygon class="arrow-6-pl-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="disabled-arrow" id="T_disable_arrow"></div>
+                </div>
+                <div class="line-under-trand date-line" id="T_manualChangeData" style="display:none">
+                    <div>
+                        <span class="date-caprion">начальная дата</span>
+                        <input id="T_startDate" type="date" onchange="chartDateChange('T')">
+                    </div>
+                    <div>
+
+                        <input id="T_endDate" type="date" onchange="chartDateChange('T')">
+                        <span class="date-caprion">конечная дата</span>
+                    </div>
+                </div>
+            </div>
+            <div class="TChart" id="tChartContainer">
+                <canvas id="tChart" width="200" height="100"></canvas>
+            </div>
+
+            <br />
+            <p class="blue">Давление</p>
+            <div class="P-line-over-trand line-over-trand">
+                <div class="range-date-selector">
+                    <span class="input-caption">интревал времени</span>
+                    <select onchange="chageValue('P')" id="P_selectDateRange">
+                        <option value="0">месяц</option>
+                        <option value="1" selected>неделя</option>
+                        <option value="2">день</option>
+                        <option value="3">прозвольно</option>
+                    </select>
+                </div>
+                <div id="P_swipeData" class="line-over-trand">
+                    <div class="arrow-6 arrow-6-blue" onclick="leftArrowClick('P',this)">
+                        <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                                <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                <polygon class="arrow-6-pl-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <input id="P_currentDate" type="date" onchange="chartDateChange('P')">
+                    <span class="end-date-caprion">конечная дата</span>
+
+
+                    <div class="arrow-6 arrow-6-blue" onclick="rightArrowClick('P',this)" id="P_arrow_right">
+                        <svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                                <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                <polygon class="arrow-6-pl-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                                <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="disabled-arrow" id="P_disable_arrow"></div>
+                </div>
+                <div class="line-under-trand date-line" id="P_manualChangeData" style="display:none">
+                    <div>
+                        <span class="date-caprion">начальная дата</span>
+                        <input id="P_startDate" type="date" onchange="chartDateChange('P')">
+                    </div>
+                    <div>
+                        <input id="P_endDate" type="date" onchange="chartDateChange('P')">
+                        <span class="date-caprion">конечная дата</span>
+                    </div>
+                </div>
+            </div>
+            <div class="PChart">
+                <canvas id="pChart" width="200" height="100"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="chbox-container">
+        <h2>Выбор параметров</h2>
+        <div class="ch-box">
+            <form action="">
+                <label class="container" onchange="checkboxChange('T')">
+                    Температура на улице
+                    <input type="checkbox" id="trend_street" name="trends" value="[q1]SHUKH/AI/AI1/Out"><span class="checkmark"></span>
+                </label>
+                <h3>Температура на этажах</h3>
+                <label class="container" onchange="checkboxChange('T')">
+                    Температура в Машзале 1
+                    <input type="checkbox" id="trend_MR_1" name="trends" value="[q1]SHUK/AI/AI1/Out" checked="checked"><span class="checkmark"></span>
+                </label>
+                <label class="container" onchange="checkboxChange('T')">
+                    Температура в Машзале 2
+                    <input type="checkbox" id="trend_MR_2" name="trends" value="[q1]SHUK/AI/AI2/Out" checked="checked"><span class="checkmark"></span>
+                </label>
+                <label class="container" onchange="checkboxChange('T')">
+                    Температура в Машзале 3
+                    <input type="checkbox" id="trend_MR_3" name="trends" value="[q1]SHUK/AI/AI3/Out" checked="checked"><span class="checkmark"></span>
+                </label>
+                <label class="container" onchange="checkboxChange('T')">
+                    Температура в Машзале 4
+                    <input type="checkbox" id="trend_MR_4" name="trends" value="[q1]SHUK/AI/AI4/Out" checked="checked"><span class="checkmark"></span>
+                </label>
+                <label class="container" onchange="checkboxChange('T')">
+                    Температура в электрощитовой
+                    <input type="checkbox" id="trend_SR" name="trends" value="[q1]SHUK/AI/AI5/Out"><span class="checkmark"></span>
+                </label>
+
+                <h3>Параметры после потребителей</h3>
+
+                <label class="container" onchange="checkboxChange('T')">
+                    Температура основная линия
+                    <input type="checkbox" id="trend_T_ML" name="trends" value="[q1]SHUKH/AI/AI2/Out"><span class="checkmark"></span>
+                </label>
+                <label class="container" onchange="checkboxChange('T')">
+                    Температура резервная линия
+                    <input type="checkbox" id="trend_T_RL" name="trends" value="[q1]SHUKH/AI/AI3/Out"><span class="checkmark"></span>
+                </label>
+                <label class="container blue-chek" onchange="checkboxChange('P')">
+                    Давление основная линия
+                    <input type="checkbox" id="trend_P_ML" name="trends" value="[q1]SHUKH/AI/AI6/Out" checked="checked"><span class="checkmark" cheked></span>
+                </label>
+                <label class="container blue-chek" onchange="checkboxChange('P')">
+                    Давление резервная линия
+                    <input type="checkbox" id="trend_P_RL" name="trends" value="[q1]SHUKH/AI/AI7/Out" checked="checked"><span class="checkmark"></span>
+                </label>
+
+
+
+                <h3>Параметры до потребителей</h3>
+
+                <label class="container" onclick="checkboxChange('T')">
+                    Температура основная линия
+                    <input type="checkbox" id="trend_T_ML_B" name="trends" value="[q1]SHUKH/AI/AI4/Out"><span class="checkmark"></span>
+                </label>
+                <label class="container" onclick="checkboxChange('T')">
+                    Температура резервная линия
+                    <input type="checkbox" id="trend_T_RL_B" name="trends" value="[q1]SHUKH/AI/AI5/Out"><span class="checkmark"></span>
+                </label>
+                <label class="container blue-chek" onclick="checkboxChange('P')">
+                    Давление на всасе насосов
+                    <input type="checkbox" id="trend_P_IN_Pmp" name="trends" value="[q1]SHUKH/AI/AI10/Out"><span class="checkmark"></span>
+                </label>
+                <label class="container blue-chek" onclick="checkboxChange('P')">
+                    Давление на выкиде насосов
+                    <input type="checkbox" id="trend_P_OUT_Pmp" name="trends" value="[q1]SHUKH/AI/AI11/Out"><span class="checkmark"></span>
+                </label>
+
+                <div class="article-line"></div>
+
+                <h3>Шкала температуры</h3>
+                <div class="radio-container">
+                    <label class="container">
+                        задать вручную
+                        <input type="radio" id="T_scale_man" name="T_scale" value="man" onclick="chek_radio_T()">
+                        <span class="checkmark checkmark-radio"></span>
+                    </label>
+                    <label class="container">
+                        автоматически
+                        <input type="radio" id="T_scale_avt" checked="checked" name="T_scale" value="avt" onclick="chek_radio_T()">
+                        <span class="checkmark checkmark-radio"></span>
+                    </label>
+                </div>
+                <div class="radio-container" id="T_scale_container" style="display:none;">
+
+                    <input type="number" id="T_scale_min" name="T_scale_man_avt" onchange="changeTchartScale()"
+                           min="-100" max="100">
+                    <label>минимум</label>
+
+                    <input type="number" id="T_scale_max" name="T_scale_man_avt" onchange="changeTchartScale()"
+                           min="-100" max="100">
+                    <label>максимум</label>
+                </div>
+
+                <h3>Шкала давления</h3>
+                <div class="radio-container">
+                    <label class="container blue-chek">
+                        задать вручную
+                        <input type="radio" id="P_scale_man" name="P_scale" onclick="chek_radio_P()">
+                        <span class="checkmark checkmark-radio"></span>
+                    </label>
+                    <label class="container blue-chek">
+                        автоматически
+                        <input type="radio" id="P_scale_avt" checked="checked" name="P_scale" onclick="chek_radio_P()">
+                        <span class="checkmark checkmark-radio"></span>
+                    </label>
+                </div>
+                <div class="radio-container" id="P_scale_container" style="display:none;">
+
+                    <input type="number" id="P_scale_min" name="P_scale_man_avt" onchange="changePchartScale()"
+                           min="-100" max="1000" step="10">
+                    <label>минимум</label>
+
+                    <input type="number" id="P_scale_max" name="P_scale_man_avt" onchange="changePchartScale()"
+                           min="-100" max="1000" step="10">
+                    <label>максимум</label>
+                </div>
+
+
+
+                @*<input class="buttn-sub" type="button" value="Подтвердить" onclick="trendChBox()">*@
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+@*<script>
+
+
+        $.ajax({
+            url: "/Home/GetChartData",
+            type: "GET",
+            data: { start: '15/11/2020 9:30:26', end: '20/11/2020 9:30:26'},
+            success: function (data) {
+                console.log(data);
+            }
+        });
+
+</script>*@
+
+<script src="~/js/ChartSettings.js"></script>
