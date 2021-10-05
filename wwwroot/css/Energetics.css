@@ -157,7 +157,7 @@ ul {
     background-color: black;
     color: white;
     letter-spacing: 1px;
-    font-size: 19.5px;
+    font-size: 18px;
 }
 
 #count2_power_label {
@@ -191,7 +191,7 @@ ul {
     background-color: black;
     color: white;
     letter-spacing: 1px;
-    font-size: 19.5px;
+    font-size: 17px;
 }
 
 #countNum2 {
@@ -953,13 +953,13 @@ ul {
     #Count1_value {
         top: 28.9%;
         left: 3.4%;
-        font-size: 15.5px;
+        font-size: 14px;
     }
 
     #Count2_value {
         top: 28.9%;
         left: 31.2%;
-        font-size: 15.5px;
+        font-size: 14px;
     }
 
     #Count3_value {
